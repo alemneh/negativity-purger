@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount',
     'rest_framework',
     'allauth.socialaccount.providers.twitter',
+    'api',
 )
 
 MIDDLEWARE_CLASSES = (
