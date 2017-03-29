@@ -10,8 +10,11 @@ access_token_secret = os.environ.get('TWITTER_ACCESSTOKENSECRET', None)
 
 def scrub_tweets_for_negativity(tweets):
     """Scrub post for negativity and if present add culprit"""
+    if len(tweets) == 0:
+        return
     culprits = {}
     culprits['total_tweets'] = len(tweets)
+    culprits['total_negative_tweets'] = 0
 
     for tweet in tweets:
         #Grab poster's info
@@ -25,6 +28,8 @@ def scrub_tweets_for_negativity(tweets):
 
         #If polarity is negative culprit is found
         if polarity < 0:
+            #Increment number of total_negative_tweets
+            culprits['total_negative_tweets'] += 1
             #if culprit is not in dic add them else add polarity
             if posters_name not in culprits:
                 culprits[posters_name] = {
@@ -46,6 +51,7 @@ def manipulate_dic_for_json(dic):
     new_dictonary = {}
     new_dictonary['data'] = []
     new_dictonary['total_tweets'] = dic['total_tweets']
+    new_dictonary['total_negative_tweets'] = dic['total_negative_tweets']
 
     for key in dic:
         if key != 'total_tweets':
@@ -59,7 +65,15 @@ def get_tweets(access_token):
 
     api = tweepy.API(auth)
 
-    return api.home_timeline(count=200)
+    tweets_list = []
+    for page in tweepy.Cursor(api.home_timeline, count=200).pages(5):
+        for tweet in page:
+            tweets_list.append(tweet)
+
+    for tweet in tweets_list:
+        print tweet.user.name
+
+    return tweets_list
 
 
 def find_culprits(access_token):
