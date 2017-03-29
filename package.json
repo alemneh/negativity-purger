@@ -1,0 +1,34 @@
+{
+  "name": "negativity-purger",
+  "version": "1.0.0",
+  "description": "Web app that will scrub users tweets for negativity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alemneh/negativity-purger.git"
+  },
+  "author": "Alemneh Asefa <alemneh.asefa@outlook.com> (http://alemneh.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alemneh/negativity-purger/issues"
+  },
+  "homepage": "https://github.com/alemneh/negativity-purger#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-register": "^6.24.0",
+    "webpack": "^2.3.2",
+    "webpack-bundle-tracker": "^0.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
