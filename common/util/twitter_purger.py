@@ -3,9 +3,9 @@ from textblob import TextBlob
 import os
 
 
-consumerKey = os.environ.get('TWITTER_CONSUMERKEY', None)
-consumerSecret = os.environ.get('TWITTER_CONSUMERSECRET', None)
-accessTokenSecret = os.environ.get('TWITTER_ACCESSTOKENSECRET', None)
+consumer_key = os.environ.get('TWITTER_CONSUMERKEY', None)
+consumer_secret = os.environ.get('TWITTER_CONSUMERSECRET', None)
+access_token_secret = os.environ.get('TWITTER_ACCESSTOKENSECRET', None)
 
 
 def scrub_tweets_for_negativity(tweets):
