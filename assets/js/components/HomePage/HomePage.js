@@ -25,13 +25,6 @@ class Home extends Component {
     this.setState({loaded: 'loaded'});
   }
 
-  handleTwitterLogin() {
-    axios.get('http://localhost:8000/accounts/twitter/login').then((res) => {
-      console.log(res);
-    }).catch((err) => {
-      console.log(err);
-    })
-  }
   render() {
     return (
       <section>
