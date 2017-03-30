@@ -1,6 +1,7 @@
-var path = require('path')
-var webpack = require('webpack')
-var BundleTracker = require('webpack-bundle-tracker')
+var path = require('path');
+var webpack = require('webpack');
+var BundleTracker = require('webpack-bundle-tracker');
+var autoprefixer = require('autoprefixer');
 
 var optimizeBundle = new webpack.optimize.UglifyJsPlugin({
   compress: {warnings: false}
@@ -30,8 +31,12 @@ module.exports = {
         query: {
           presets: ['react']
         }
-      }
+      },
+      { test: /\.css$/, loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]!postcss-loader'}
     ]
+  },
+  postcss: function() {
+    return [autoprefixer];
   },
 
   resolve: {

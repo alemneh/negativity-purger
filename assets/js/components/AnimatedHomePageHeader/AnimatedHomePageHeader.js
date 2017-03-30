@@ -1,20 +1,25 @@
 import React from 'react';
-import styles from './AnimatedHomePageHeader.scss';
+import styles from './AnimatedHomePageHeader.css';
+const loaded_style = styles.loaded;
 
-const AnimatedHomePageHeader = () => {
+
+const AnimatedHomePageHeader = ({ loaded }) => {
+  let style_for_load = loaded ? ' ' + loaded_style : '';
+
   return (
     <div className={styles.textContainer}>
-      <span className={styles.regText}>Purge </span>
-      <span className={styles.letter}>N</span>
-      <span className={styles.letter}>e</span>
-      <span className={styles.letter}>g</span>
-      <span className={styles.letter}>a</span>
-      <span className={styles.letter}>t</span>
-      <span className={styles.letter}>i</span>
-      <span className={styles.letter}>v</span>
-      <span className={styles.letter}>i</span>
-      <span className={styles.letter}>t</span>
-      <span className={styles.letter}>y</span>
+      <span className={styles.regText + style_for_load}>Purge </span>
+      <span className={styles.letter + style_for_load}> </span>
+      <span className={styles.letter + style_for_load}>N</span>
+      <span className={styles.letter + style_for_load}>e</span>
+      <span className={styles.letter + style_for_load}>g</span>
+      <span className={styles.letter + style_for_load}>a</span>
+      <span className={styles.letter + style_for_load}>t</span>
+      <span className={styles.letter + style_for_load}>i</span>
+      <span className={styles.letter + style_for_load}>v</span>
+      <span className={styles.letter + style_for_load}>i</span>
+      <span className={styles.letter + style_for_load}>t</span>
+      <span className={styles.letter + style_for_load}>y</span>
     </div>
   )
 };

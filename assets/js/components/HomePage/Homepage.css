@@ -1,0 +1,30 @@
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.homeBody {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  text-align: center;
+}
+
+.homeBody p {
+  color: white;
+}
+
+
+.fadeIn {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:5s;
+    -moz-animation-duration:5s;
+    animation-duration:5s;
+}
