@@ -1,12 +1,12 @@
 import React from 'react';
 import SocialMediaLink from '../SocialMediaLink/SocialMediaLink'
+import styles from './SocialMediaList.css';
 
 
 const SocialMediaList = () => {
   return (
-    <ul>
+    <ul className={styles.socialLinks}>
       <SocialMediaLink name="Twitter" url="accounts/twitter/login" />
-      <SocialMediaLink name="Facebook" url="accounts/facebook/login" />
     </ul>
   )
 }

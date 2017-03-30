@@ -32,9 +32,10 @@ class Home extends Component {
           <AnimatedHeader loaded={this.state.loaded}/>
           <div className={styles.homeBody + ' ' + styles.fadeIn}>
             <p>Scrub your twitter account and identify
-              account that you follow who polluting your
-              timeline with negativity.
+              accounts, that you
             </p>
+            <p>follow, who are polluting your
+            timeline with negativity.</p>
             <SocialMediaList />
           </div>
       </section>

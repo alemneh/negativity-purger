@@ -7,8 +7,9 @@
 }
 
 .culpritsPage h2 {
-  padding: 0;
+  padding: .5em;
   margin: 0;
+
 }
 
 .stats {
@@ -25,17 +26,20 @@
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 49%;
-  border-right: 1px solid white;
+  width: 50%;
+
   float: left;
+  background-color: aqua;
 }
+
+
 
 .totalNegativeTweets {
   text-align: center;
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 49%;
-  border-left: 1px solid white;
-  float: left;
+  width: 50%;
+  float: right;
+  background-color: darkred;
 }

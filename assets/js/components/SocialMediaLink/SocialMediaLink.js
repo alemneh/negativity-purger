@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './SocialMediaLink.css';
 
 const SocialMediaLink = ({ name, url }) => {
   return (
-    <li>
+    <li className={styles.twitterBtn}>
       <a href={url}>{name}</a>
     </li>
   )

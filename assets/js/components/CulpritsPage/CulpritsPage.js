@@ -40,11 +40,7 @@ class CulpritsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      culprits: {
-        total_tweets: 800,
-        total_negative_tweets: 60,
-        data: data
-      }
+      culprits: null
     }
   }
 
