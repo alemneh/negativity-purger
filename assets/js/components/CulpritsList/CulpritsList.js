@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './CulpritsList.css';
 import Culprit from '../Culprit/Culprit';
 
 
@@ -12,9 +13,9 @@ const CulpritsList = ({ culprits }) => {
   };
 
   return (
-    <ul>
+    <ol className={styles.culpritList}>
       { renderCulpritsList() }
-    </ul>
+    </ol>
   );
 };
 

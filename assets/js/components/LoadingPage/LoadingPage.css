@@ -35,7 +35,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 65px;
-  clip: rect(0px, 160px, 75px, 0px);
+  clip: rect(0px, 175px, 175px, 0px);
   background: linear-gradient(#fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat;
   background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
   color: #fff;

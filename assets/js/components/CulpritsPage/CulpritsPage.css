@@ -1,0 +1,41 @@
+.culpritsPage {
+  color: white;
+}
+
+.culpritsPage hr {
+  margin-top: 0;
+}
+
+.culpritsPage h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.stats {
+  height: 200px;
+  border-bottom: 2px solid white;
+}
+
+.stats p {
+  font-size: 3em;
+}
+
+.totalTweets {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 49%;
+  border-right: 1px solid white;
+  float: left;
+}
+
+.totalNegativeTweets {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 49%;
+  border-left: 1px solid white;
+  float: left;
+}

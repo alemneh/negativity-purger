@@ -69,9 +69,6 @@ def get_tweets(access_token):
     # for page in tweepy.Cursor(api.home_timeline, count=200).pages(5):
     #     for tweet in page:
     #         tweets_list.append(tweet)
-    #
-    # for tweet in tweets_list:
-    #     print tweet.user.name
 
     return tweets_list
 

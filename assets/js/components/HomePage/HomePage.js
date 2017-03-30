@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AnimatedHeader from '../AnimatedHomePageHeader/AnimatedHomePageHeader';
+import SocialMediaList from '../SocialMediaList/SocialMediaList';
 import styles from './HomePage.css';
 
 
@@ -34,7 +35,7 @@ class Home extends Component {
               account that you follow who polluting your
               timeline with negativity.
             </p>
-            <a href="accounts/twitter/login">Twitter Login</a>
+            <SocialMediaList />
           </div>
       </section>
     )
