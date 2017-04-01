@@ -1,0 +1,53 @@
+/*
+.culpritList { width:320px; color: white }
+.culpritList ol {
+  font-style:italic;
+  font-family:Georgia, Times, serif;
+  font-size:24px;
+  color:#bfe1f1;
+}
+.culpritList ol li { }
+.culpritList ol li p {
+  padding:8px;
+  font-style:normal;
+  font-family:Arial;
+  font-size:13px;
+  color:#eee;
+  border-left: 1px solid #999;
+}
+
+.culpritList ol li p em {
+  display:block;
+}*/
+
+.culpritList {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+    margin: 0;
+    margin-left: 3em;
+    padding: 0;
+
+    counter-reset: li-counter;
+}
+.culpritList > li{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    min-height: 3em;
+    border-left: 2px solid #CCCCCC;
+}
+.culpritList > li:before {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    width: 0.8em;
+
+    font-size: 3em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: right;
+    color: #464646;
+
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}

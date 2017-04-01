@@ -1,0 +1,16 @@
+.culprit {
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.culprit small {
+  color: #f70808;
+}
+
+.culprit p {
+  color: #fb6969;
+}
+
+.culprit img {
+  border: 1px solid white;
+}
