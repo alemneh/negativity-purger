@@ -102,6 +102,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = (
     #This lets Django's collectstatic store our bundles
@@ -132,7 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 LOGIN_REDIRECT_URL = "/purge/"
 
