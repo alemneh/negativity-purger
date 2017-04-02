@@ -1,5 +1,6 @@
 var webpack = require('webpack')
 var BundleTracker = require('webpack-bundle-tracker')
+var CONFIG = require('./config/config')["production"];
 
 var config = require('./webpack.base.config.js')
 
@@ -11,7 +12,8 @@ config.plugins = config.plugins.concat([
   // removes a lot of debugging code in React
   new webpack.DefinePlugin({
     'process.env': {
-      'NODE_ENV': JSON.stringify('production')
+      'NODE_ENV': JSON.stringify('production'),
+      'URL': JSON.stringify(CONFIG.host)
   }}),
 
   // keeps hashes consistent between compilations
