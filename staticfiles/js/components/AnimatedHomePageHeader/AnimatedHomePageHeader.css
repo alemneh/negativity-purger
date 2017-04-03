@@ -67,8 +67,8 @@ span {
   filter: blur(0);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .textContainer {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
