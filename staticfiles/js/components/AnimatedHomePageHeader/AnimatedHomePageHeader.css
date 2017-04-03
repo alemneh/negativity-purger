@@ -68,7 +68,7 @@ span {
 }
 
 @media (max-width: 320px) {
-  .facet_sidebar {
+  .textContainer {
     font-size: 28px;
   }
 }
