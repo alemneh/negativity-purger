@@ -5,7 +5,6 @@ import os
 
 consumer_key = os.environ.get('TWITTER_CONSUMERKEY', None)
 consumer_secret = os.environ.get('TWITTER_CONSUMERSECRET', None)
-access_token_secret = os.environ.get('TWITTER_ACCESSTOKENSECRET', None)
 
 
 def scrub_tweets_for_negativity(tweets):
@@ -59,9 +58,10 @@ def manipulate_dic_for_json(dic):
 
     return new_dictonary
 
-def get_tweets(access_token):
+def get_tweets(access_token, access_token_secret):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(str(access_token), access_token_secret)
+
 
     api = tweepy.API(auth)
 
@@ -73,9 +73,9 @@ def get_tweets(access_token):
     return tweets_list
 
 
-def find_culprits(access_token):
+def find_culprits(access_token, access_token_secret):
     """Returns a dictonary of all culprits and total number of tweets"""
-    tweets = get_tweets(access_token)
+    tweets = get_tweets(access_token, access_token_secret)
     culprits = scrub_tweets_for_negativity(tweets)
 
     return culprits

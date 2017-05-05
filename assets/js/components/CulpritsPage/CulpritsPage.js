@@ -49,7 +49,7 @@ class CulpritsPage extends Component {
   }
 
   fetchCulprits() {
-    axios.get(process.env.URL + '/api/purge/').then((res) => {
+    axios.get('/api/purge/').then((res) => {
       console.log(res);
       this.setState({culprits: res.data});
     }).catch((err) => {

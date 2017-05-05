@@ -2,10 +2,18 @@ var path = require('path');
 var webpack = require('webpack');
 var BundleTracker = require('webpack-bundle-tracker');
 var autoprefixer = require('autoprefixer');
+var CONFIG = require('./config/config')["development"];
+
 
 var optimizeBundle = new webpack.optimize.UglifyJsPlugin({
   compress: {warnings: false}
 });
+
+var plugins = new webpack.DefinePlugin({
+'process.env': {
+  'NODE_ENV': JSON.stringify('development'),
+  'URL': JSON.stringify(CONFIG.host)
+}});
 
 
 module.exports = {
@@ -18,7 +26,13 @@ module.exports = {
   },
 
   plugins: [
-    new BundleTracker({filename: './webpack-stats.json'})
+    new BundleTracker({filename: './webpack-stats.json'}),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development'),
+        'URL': JSON.stringify(CONFIG.host)
+      }
+    }),
   ],
 
   module: {
